@@ -110,7 +110,7 @@ Navbar
   border-bottom: 1px solid var(--secondary);
 }
 
-.active {
+.active-nav-link {
   color: var(--black);
   border-bottom: 1px solid var(--secondary);
 }

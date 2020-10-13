@@ -54,10 +54,10 @@ navbarTrigger?.addEventListener('click', (e) => {
   console.log(path);
 
   navLinks.forEach((navLink) => {
-    navLink.classList.remove('active');
+    navLink.classList.remove('active-nav-link');
     console.log(navLink.href);
     if(navLink.href === path) {
-      navLink.classList.add('active');
+      navLink.classList.add('active-nav-link');
     }
   })
 
