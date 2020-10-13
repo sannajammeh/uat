@@ -1,7 +1,10 @@
 import Turbolinks from 'turbolinks';
+import initStudies from './js/studies';
 Turbolinks.start();
 
 document.addEventListener('turbolinks:load', () => {
+  initStudies();
+
   const navbar = document.querySelector('nav');
   navbar.className = 'navbar';
   navbar.innerHTML = /*html*/ `
@@ -21,9 +24,8 @@ document.addEventListener('turbolinks:load', () => {
 <a class="nav-search" role="button" title="search" href="#"><div><i class="fas fa-search"></i></div></a>
 `;
 
-const mobileNav = document.querySelector('.mobile-nav');
-mobileNav.innerHTML = /*html*/`
-
+  const mobileNav = document.querySelector('.mobile-nav');
+  mobileNav.innerHTML = /*html*/ `
     <div class="display-nav">
       <ul class="display-ul">
         <li class="display-link"><a title="Go to test" class="display-item" href="/">Home</a></li>
@@ -36,31 +38,25 @@ mobileNav.innerHTML = /*html*/`
     <div class="overlay"></div>
 `;
 
-// Responsive navbar
-const navbarTrigger = document.querySelector('.navbar-trigger');
-const overlay = document.querySelector(".overlay");
-const displayNav = document.querySelector(".display-nav");
-const activeNav = document.querySelector(".active");
+  // Responsive navbar
+  const navbarTrigger = document.querySelector('.navbar-trigger');
+  const overlay = document.querySelector('.overlay');
+  const displayNav = document.querySelector('.display-nav');
 
-navbarTrigger?.addEventListener('click', (e) => {
-  overlay.classList.toggle('active');
-  displayNav.classList.toggle('active');
-});
+  navbarTrigger?.addEventListener('click', (e) => {
+    overlay.classList.toggle('active');
+    displayNav.classList.toggle('active');
+  });
 
   // Nav-link active
-  const path = window.location.href; 
+  const path = window.location.href;
   const navLinks = document.querySelectorAll('.nav-item');
 
-  console.log(path);
-
   navLinks.forEach((navLink) => {
-    navLink.classList.remove('active-nav-link');
-    console.log(navLink.href);
-    if(navLink.href === path) {
-      navLink.classList.add('active-nav-link');
+    navLink.classList.remove('active');
+
+    if (navLink.href === path) {
+      navLink.classList.add('active');
     }
-  })
-
+  });
 });
-
-

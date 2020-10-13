@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 @import url('./spacing.css');
+@import url('./typography.css');
+@import url('./colors.css');
 
 :root {
   /* CSS HEX */
   --antique-ruby: #880d2eff;
   --cultured: #f6f6f6ff;
   --cornflower-blue: #7796cbff;
-  --black: #121212ff;
+  --black: #111;
   --oxford-blue: #161b33ff;
 
   --primary: var(--oxford-blue);
@@ -31,6 +33,7 @@ body {
   font-family: 'Oswald', sans-serif;
   background-color: var(--bg);
   color: var(--text-on-bg);
+  scroll-behavior: smooth;
   font-weight: 300;
 }
 
@@ -41,11 +44,30 @@ h4,
 h5,
 h6 {
   font-family: 'Oswald', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h1 {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-weight-bold {
+  font-weight: 600;
+}
+.font-weight-medium {
   font-weight: 500;
+}
+
+w-100 {
+  width: 100% !important;
+}
+w-max-100 {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 .align-items-center {
@@ -69,8 +91,6 @@ h1 {
 Navbar
 ------ 
 */
-
-
 
 .navbar {
   background-color: var(--bg);
@@ -210,8 +230,6 @@ Navbar
   border-bottom: 1px solid var(--secondary);
 }
 
-
-
 /*
 ---- 
 Home
@@ -224,7 +242,7 @@ Home
 }
 
 .home-header:after {
-  content: " ";
+  content: ' ';
   display: block;
   width: 100px;
   height: 1px;
@@ -255,14 +273,12 @@ Home
 .home-img {
   width: 100%;
   object-fit: cover;
-  
 }
 
 .annoncment {
   color: var(--light);
   padding: 30px;
 }
-
 
 @media (max-width: 781px) {
   .navbar-trigger {
@@ -275,5 +291,3 @@ Home
     display: none;
   }
 }
-
-
