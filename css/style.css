@@ -28,9 +28,10 @@
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Oswald', sans-serif;
   background-color: var(--bg);
   color: var(--text-on-bg);
+  font-weight: 300;
 }
 
 h1,
@@ -51,8 +52,16 @@ h1 {
   align-items: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .d-inline {
   display: inline-block;
+}
+
+.d-flex {
+  display: flex;
 }
 
 /*
@@ -60,6 +69,8 @@ h1 {
 Navbar
 ------ 
 */
+
+
 
 .navbar {
   background-color: var(--bg);
@@ -95,6 +106,11 @@ Navbar
 }
 
 .nav-item:hover {
+  color: var(--black);
+  border-bottom: 1px solid var(--secondary);
+}
+
+.active {
   color: var(--black);
   border-bottom: 1px solid var(--secondary);
 }
@@ -142,20 +158,28 @@ Navbar
   border-radius: 50%;
   background: var(--light);
   transition: transform 0.5s;
+  z-index: 1;
 }
+
 .overlay.active {
   transform: scale(100, 100);
 }
 
 .display-nav {
+  opacity: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  z-index: 1;
+  z-index: 998;
   visibility: hidden;
+  transition: all 0.3s ease;
+  transition-property: opacity;
+  transition-delay: 0.01s;
 }
+
 .display-nav.active {
   visibility: visible;
+  opacity: 1;
 }
 
 .display-ul {
@@ -166,6 +190,7 @@ Navbar
   margin: 0;
   padding: 0;
   list-style: none;
+  z-index: 990;
 }
 
 .display-link {
@@ -187,6 +212,56 @@ Navbar
 
 
 
+/*
+---- 
+Home
+---- 
+*/
+
+.home-header {
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+.home-header:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 1px;
+  margin: 20px 0 20px;
+  background: var(--secondary);
+}
+
+.home-section {
+  padding: 100px 0;
+  margin: auto;
+  display: block;
+  justify-content: center;
+}
+
+.section-header {
+  padding: 40px;
+  white-space: nowrap;
+}
+
+.section-input {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  box-shadow: var(--shadow);
+  transition: transform 1s;
+}
+
+.home-img {
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.annoncment {
+  color: var(--light);
+  padding: 30px;
+}
 
 
 @media (max-width: 781px) {

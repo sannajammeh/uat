@@ -9,8 +9,8 @@ document.addEventListener('turbolinks:load', () => {
   <a role="button" title="icon" href="#page-top"><img class="logo-img" src="/img/uat-logo.png"></a>
   <div class="container">
   <ul class="navbar-nav">
-    <li class="nav-link"><a title="Go to home" href="#index.html" class="nav-item">Home</a></li>
-    <li class="nav-link"><a title="Go to studies" href="#studies.html" class="nav-item">Studies</a></li>
+    <li class="nav-link"><a title="Go to home" href="/" class="nav-item active">Home</a></li>
+    <li class="nav-link"><a title="Go to studies" href="studies.html" class="nav-item">Studies</a></li>
     <li class="nav-link"><a title="Go to test" href="#" class="nav-item">Test</a></li>
     <li class="nav-link"><a title="Go to test" href="#" class="nav-item">Test</a></li>
   </ul>
@@ -23,30 +23,44 @@ document.addEventListener('turbolinks:load', () => {
 
 const mobileNav = document.querySelector('.mobile-nav');
 mobileNav.innerHTML = /*html*/`
-<div class="overlay"></div>
+
     <div class="display-nav">
       <ul class="display-ul">
-        <li class="display-link"><a title="Go to test" class="display-item" href="#index.html">Home</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="#studies.html">Studies</a></li>
+        <li class="display-link"><a title="Go to test" class="display-item" href="/">Home</a></li>
+        <li class="display-link"><a title="Go to test" class="display-item" href="studies.html">Studies</a></li>
         <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
         <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
         <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
       </ul>
     </div>
+    <div class="overlay"></div>
 `;
 
 // Responsive navbar
 const navbarTrigger = document.querySelector('.navbar-trigger');
+const overlay = document.querySelector(".overlay");
+const displayNav = document.querySelector(".display-nav");
+const activeNav = document.querySelector(".active");
+
 navbarTrigger?.addEventListener('click', (e) => {
-  
+  overlay.classList.toggle('active');
+  displayNav.classList.toggle('active');
 });
 
-$(document).ready(function(){
-  $('.navbar-trigger').click(function(){
-    $('.overlay').toggleClass('active');
-    $('.display-nav').toggleClass('active');
+  // Nav-link active
+  const path = window.location.href; 
+  const navLinks = document.querySelectorAll('.nav-item');
+
+  console.log(path);
+
+  navLinks.forEach((navLink) => {
+    navLink.classList.remove('active');
+    console.log(navLink.href);
+    if(navLink.href === path) {
+      navLink.classList.add('active');
+    }
   })
-})
+
 });
 
 
