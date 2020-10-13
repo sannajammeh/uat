@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('./spacing.css');
+
+:root {
+  /* CSS HEX */
+  --antique-ruby: #880d2eff;
+  --cultured: #f6f6f6ff;
+  --cornflower-blue: #7796cbff;
+  --black: #121212ff;
+  --oxford-blue: #161b33ff;
+
+  --primary: var(--oxford-blue);
+  --secondary: var(--antique-ruby);
+  --light: var(--cultured);
+  --bg: var(--cultured);
+  --text-on-bg: var(--black);
+  --text-on-primary: var(--cultured);
+  --border: 1px solid rgba(0, 0, 0, 0.1);
+  --shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+  --border-hover-color: var(--secondary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: var(--bg);
+  color: var(--text-on-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 500;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "uat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sannajammeh/uat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sannajammeh/uat/issues"
+  },
+  "homepage": "https://github.com/sannajammeh/uat#readme",
+  "dependencies": {
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
