@@ -130,7 +130,7 @@ Navbar
   border-bottom: 1px solid var(--secondary);
 }
 
-.active-nav-link {
+.active {
   color: var(--black);
   border-bottom: 1px solid var(--secondary);
 }
@@ -289,5 +289,43 @@ Home
   }
   .nav-item {
     display: none;
+  }
+}
+
+/* Studies */
+
+.studies-section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.study-card {
+  padding: 1rem;
+  transition: all 0.2s ease;
+  transition-property: color, background-color, border;
+  cursor: pointer;
+  background-color: transparent !important;
+  color: #dddddd;
+}
+.study-card:hover {
+  /* background-color: var(--secondary) !important;
+  color: #111111 !important; */
+  border-bottom: 1px solid var(--secondary);
+}
+
+.study {
+  border-bottom: var(--border);
+  font-family: 'Oswald', sans-serif;
+}
+.study:hover {
+  cursor: pointer;
+}
+.study h2 .study h2:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .studies-section {
+    padding: 3rem 2rem;
   }
 }
