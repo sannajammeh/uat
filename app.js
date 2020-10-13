@@ -41,11 +41,4 @@ document.addEventListener('turbolinks:load', () => {
   // Responsive navbar
   const navbarTrigger = document.querySelector('.navbar-trigger');
   navbarTrigger?.addEventListener('click', (e) => {});
-
-  $(document).ready(function () {
-    $('.navbar-trigger').click(function () {
-      $('.overlay').toggleClass('active');
-      $('.display-nav').toggleClass('active');
-    });
-  });
 });

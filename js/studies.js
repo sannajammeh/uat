@@ -1,4 +1,8 @@
 export default function initStudies() {
+  const match = window.matchMedia('screen and (max-width: 768px)');
+  let isMobile = match.matches;
+  match.addEventListener('change', (e) => (isMobile = e.matches));
+
   const studyDisplay = document.querySelector('.study-display');
   if (!studyDisplay) return;
 
@@ -22,9 +26,19 @@ export default function initStudies() {
 
     studyContainer.innerHTML = /*html*/ `
       <div class="study p-2">
-        <h2>Javascript</h2>
+        <h2 class="f3 font-weight-bold">${label} Course name 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsum.</p>
       </div>
+      <div class="study p-2">
+        <h2 class="f3 font-weight-bold">${label} Course name 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsum.</p>
+      </div>
+      <div class="study p-2">
+        <h2 class="f3 font-weight-bold">${label} Course name 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsum.</p>
+      </div>
+      <div>.....</div>
     `;
-    studyContainer.scrollIntoView({ behavior: 'smooth' });
+    isMobile && studyContainer.scrollIntoView({ behavior: 'smooth' });
   }
 }

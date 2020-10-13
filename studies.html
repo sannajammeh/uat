@@ -10,12 +10,22 @@
       integrity="sha512-YHuwZabI2zi0k7c9vtg8dK/63QB0hLvD4thw44dFo/TfBFVVQOqEG9WpviaEpbyvgOIYLXF1n7xDUfU3GDs0sw=="
       crossorigin="anonymous"
     />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./app.js"></script>
   </head>
   <body>
     <!-- Navbar -->
     <nav></nav>
+    <div class="mobile-nav"></div>
     <!-- Navbar end -->
 
     <!-- Studies start-->
@@ -26,38 +36,40 @@
           <div class="row mt-2">
             <div class="col-xs-6 mb-3">
               <div class="study-card bg-silver black" role="button" data-study-label="Technology">
-                <h2 class="f2 font-weight-bold text-center">Technology</h2>
+                <h2 class="f2 font-weight-medium">Technology</h2>
               </div>
             </div>
             <div class="col-xs-6 mb-3">
               <div class="study-card bg-silver black" role="button" data-study-label="Health">
-                <h2 class="f2 font-weight-bold text-center">Health</h2>
+                <h2 class="f2 font-weight-medium">Health</h2>
               </div>
             </div>
             <div class="col-xs-6 mb-3">
               <div class="study-card bg-silver black" role="button" data-study-label="Social">
-                <h2 class="f2 font-weight-bold text-center">Social</h2>
+                <h2 class="f2 font-weight-medium">Social</h2>
               </div>
             </div>
             <div class="col-xs-6 mb-3">
               <div class="study-card bg-silver black" role="button" data-study-label="Journalism">
-                <h2 class="f2 font-weight-bold text-center">Journalism</h2>
+                <h2 class="f2 font-weight-medium">Journalism</h2>
               </div>
             </div>
             <div class="col-xs-6 mb-3">
               <div class="study-card bg-silver black" role="button" data-study-label="Mathematics">
-                <h2 class="f2 font-weight-bold text-center">Mathematics</h2>
+                <h2 class="f2 font-weight-medium">Mathematics</h2>
+              </div>
+            </div>
+            <div class="col-xs-6 mb-3">
+              <div class="study-card bg-silver black" role="button" data-study-label="Economics">
+                <h2 class="f2 font-weight-medium">Economics</h2>
               </div>
             </div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 bg-silver black studies-section study-display">
           <h1 class="f1" data-js="study-title">Select a study</h1>
-          <h2 class="mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis architecto itaque
-            reiciendis at distinctio incidunt ad voluptatibus, beatae praesentium! Sequi?
-          </h2>
-          <div data-js="studies"></div>
+          <h2 class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          <div class="mt-2" data-js="studies"></div>
         </div>
       </div>
     </section>

@@ -207,6 +207,14 @@ Navbar
 
 .study {
   border-bottom: var(--border);
+  font-family: 'Oswald', sans-serif;
+}
+.study:hover {
+  cursor: pointer;
+}
+
+.study h2:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
