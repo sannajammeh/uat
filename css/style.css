@@ -47,6 +47,14 @@ h1 {
   font-weight: 500;
 }
 
+.align-items-center {
+  align-items: center;
+}
+
+.d-inline {
+  display: inline-block;
+}
+
 /*
 ------ 
 Navbar
@@ -54,7 +62,143 @@ Navbar
 */
 
 .navbar {
-  height: 200px;
   background-color: var(--bg);
   border-bottom: var(--border);
+  padding-top: 0;
+  padding-bottom: 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  height: 105px;
 }
+
+.navbar-nav {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 20px;
+  justify-content: center;
+}
+
+.logo-img {
+  height: 80px;
+  width: 80px;
+  margin: 10px 20px;
+}
+
+.nav-item {
+  color: var(--text-on-bg);
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: var(--black);
+  border-bottom: 1px solid var(--secondary);
+}
+
+.navbar-trigger {
+  display: none;
+  outline: none;
+  background: transparent;
+  float: right;
+  color: var(--secondary);
+  border: none;
+  font-size: 40px;
+  padding: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
+.nav-search {
+  color: var(--secondary);
+  font-size: 40px;
+  padding: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+  display: block;
+  border-left: var(--border);
+  height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-search:hover {
+  color: var(--cornflower-blue);
+  background-color: black;
+}
+
+.overlay {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  background: var(--light);
+  transition: transform 0.5s;
+}
+.overlay.active {
+  transform: scale(100, 100);
+}
+
+.display-nav {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  visibility: hidden;
+}
+.display-nav.active {
+  visibility: visible;
+}
+
+.display-ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.display-link {
+  padding: 10px;
+}
+
+.display-item {
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-on-bg);
+  position: relative;
+  font-size: 50px;
+  text-decoration: none;
+  padding: 20px 20px;
+  display: block;
+  border-bottom: 1px solid var(--secondary);
+}
+
+
+
+
+
+@media (max-width: 781px) {
+  .navbar-trigger {
+    display: inline-block !important;
+  }
+  .nav-search {
+    display: none;
+  }
+  .nav-item {
+    display: none;
+  }
+}
+
+
