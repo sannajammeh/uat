@@ -7,6 +7,10 @@ document.addEventListener('turbolinks:load', () => {
   initStudies();
 
   const navbar = document.querySelector('nav');
+  console.log(navbar)
+  if (!navbar) {
+    return;
+  }
   navbar.className = 'navbar';
   navbar.innerHTML = /*html*/ `
 
@@ -15,6 +19,7 @@ document.addEventListener('turbolinks:load', () => {
   <ul class="navbar-nav">
     <li class="nav-link"><a title="Go to home" href="/" class="nav-item active">Home</a></li>
     <li class="nav-link"><a title="Go to studies" href="studies.html" class="nav-item">Studies</a></li>
+    <li class="nav-link"><a title="Go to studies" href="about-us.html" class="nav-item">About us</a></li>
     <li class="nav-link"><a title="Go to test" href="#" class="nav-item">Test</a></li>
     <li class="nav-link"><a title="Go to test" href="#" class="nav-item">Test</a></li>
   </ul>
@@ -38,12 +43,6 @@ document.addEventListener('turbolinks:load', () => {
     </div>
     <div class="overlay"></div>
 `;
-
-  const footer = document.querySelector('footer');
-  footer.className = 'footer';
-  footer.innerHTML = /*hmtl*/ `
-  
-  `;
 
   // Responsive navbar
   const navbarTrigger = document.querySelector('.navbar-trigger');

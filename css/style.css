@@ -36,6 +36,7 @@ body {
   scroll-behavior: smooth;
   font-weight: 300;
   overflow-x: hidden;
+  line-height: 1.4;
 }
 
 h1,
@@ -51,6 +52,12 @@ h6 {
 h1 {
   font-weight: 600;
 }
+
+hr {
+  border-bottom: 1px solid var(--secondary);
+  margin: 50px 0;
+}
+
 
 .text-center {
   text-align: center;
@@ -117,8 +124,8 @@ Navbar
 }
 
 .logo-img {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   margin: 10px 20px;
 }
 
@@ -173,6 +180,7 @@ Navbar
 }
 
 .overlay {
+  display: none;
   position: fixed;
   width: 50px;
   height: 50px;
@@ -236,8 +244,11 @@ Navbar
 /*
 ---- 
 Home
----- 
 */
+
+.welcome-page {
+  display: flex;
+}
 
 .home-header {
   padding: 10px 0;
@@ -254,29 +265,26 @@ Home
 }
 
 .home-section {
-  padding: 100px 0;
+  width: 90%;
   margin: auto;
-  display: block;
   justify-content: center;
 }
 
-
-
 .section-header {
-  padding: 40px;
-  white-space: nowrap;
+  padding: 40px 0;
 }
 
 .section-input {
   width: 100%;
   padding: 30px;
   border: none;
+  margin: 0 0.5rem;
   box-shadow: var(--shadow);
   transition: transform 1s;
 }
 
 .home-img {
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 
@@ -295,6 +303,9 @@ Home
   .nav-item {
     display: none;
   }
+  .overlay {
+    display: block;
+  }
 }
 
 /*
@@ -304,14 +315,7 @@ Footer
 */
 
 .footer {
-  padding-bottom: 10px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
-  position:relative;
+
 }
 
 .footer-heading {
@@ -343,8 +347,8 @@ Footer
   line-height: 38px;
   font-size: 20px;
   text-align: center;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s ease-in-out;
   vertical-align: bottom;
 }
 
@@ -354,13 +358,9 @@ Footer
 }
 
 .footer-btn {
-  margin-bottom: 0;
   float: right;
   border: 1px solid var(--secondary);
   padding: 10px;
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
   background: linear-gradient(to right, var(--secondary) 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -439,6 +439,7 @@ Footer
 }
 
 
+
 /* 
 -------
 Studies 
@@ -495,3 +496,94 @@ Studies
     padding: 3rem 2rem;
   }
 }
+
+/*
+-------- 
+About us 
+-------- 
+*/
+
+.about-us {
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+}
+
+.about-us-heading {
+  padding: 100px 0;
+  margin-right: 30%;
+}
+
+.about-us-heading:after {
+  content: ' ';
+  display: block;
+  width: 100px;
+  height: 1px;
+  margin: 20px 0 0;
+  background: var(--secondary);
+}
+
+.about-us-small-heading {
+  padding: 20px 0;
+  margin: 0 1rem;
+
+}
+
+.about-us-small-heading:after {
+  content: ' ';
+  display: block;
+  width: 100px;
+  height: 1px;
+  margin: 20px 0 0;
+  background: var(--secondary);
+}
+
+.about-us-txt {
+  margin: 0 1rem;
+}
+
+.about-us-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.gallery-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  transition: all 0.5s ease-in-out;
+}
+
+.gallery-img:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  opacity: 0.7;
+}
+
+.about-us-p1 {
+  margin-right: 50%;
+}
+
+.about-us-p2 {
+  margin-left: 50%;
+}
+
+@media (max-width: 1233px) {
+  .about-us-heading {
+    padding: 50px 0;
+    margin-right: 0%;
+  }
+  .about-us-txt {
+    padding: 30px 0;
+    
+  }
+}
+
+
+
+
