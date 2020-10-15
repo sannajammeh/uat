@@ -28,15 +28,21 @@ document.addEventListener('turbolinks:load', () => {
   mobileNav.innerHTML = /*html*/ `
     <div class="display-nav">
       <ul class="display-ul">
-        <li class="display-link"><a title="Go to test" class="display-item" href="/">Home</a></li>
+        <li class="display-link"><a title="Go to test" class="display-item" href="index.html">Home</a></li>
         <li class="display-link"><a title="Go to test" class="display-item" href="studies.html">Studies</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
+        <li class="display-link"><a title="Go to test" class="display-item" href="about-us.html">About Us</a></li>
         <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
         <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
       </ul>
     </div>
     <div class="overlay"></div>
 `;
+
+  const footer = document.querySelector('footer');
+  footer.className = 'footer';
+  footer.innerHTML = /*hmtl*/ `
+  
+  `;
 
   // Responsive navbar
   const navbarTrigger = document.querySelector('.navbar-trigger');

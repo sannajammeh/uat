@@ -165,8 +165,8 @@ Navbar
 }
 
 .nav-search:hover {
-  color: var(--cornflower-blue);
-  background-color: black;
+  color: var(--light);
+  background-color: var(--secondary);
 }
 
 .overlay {
@@ -257,6 +257,8 @@ Home
   justify-content: center;
 }
 
+
+
 .section-header {
   padding: 40px;
   white-space: nowrap;
@@ -264,7 +266,7 @@ Home
 
 .section-input {
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   border: none;
   box-shadow: var(--shadow);
   transition: transform 1s;
@@ -292,7 +294,153 @@ Home
   }
 }
 
-/* Studies */
+/*
+------ 
+Footer
+------ 
+*/
+
+.footer {
+  padding-bottom: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  position:relative;
+}
+
+.footer-heading {
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.footer-adress {
+  text-decoration: none;
+  color: var(--black)
+}
+
+.footer-adress:hover {
+  color: var(--secondary);
+}
+
+.social-icons {
+  padding: 10px 0;
+}
+
+.social-icon {
+  margin: 0 10px 0 0;
+  color: var(--secondary);
+  background-color: var(--light);
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+  line-height: 38px;
+  font-size: 20px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
+  vertical-align: bottom;
+}
+
+.social-icon:hover {
+  color: var(--light);
+  background-color: var(--secondary);
+}
+
+.footer-btn {
+  margin-bottom: 0;
+  float: right;
+  border: 1px solid var(--secondary);
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  background: linear-gradient(to right, var(--secondary) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+}
+
+.footer-btn:hover {
+  background-position: left bottom;
+  cursor: pointer;
+  color: var(--light);
+}
+
+.happenings-text {
+  width:90%;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--light);
+  padding: 30px 0;
+}
+
+.happenings {
+  border-top: 1px solid var(--light);
+  color: var(--light);
+  padding: 30px;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+.happenings:hover {
+  cursor: pointer;
+}
+
+.happening-1 {
+  background: linear-gradient(to right, #0D8867 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+}
+
+.happening-1:hover {
+  background-position: left bottom;
+}
+
+.happening-2 {
+  background: linear-gradient(to right, #0D2D88 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+}
+
+.happening-2:hover {
+  background-position: left bottom;
+}
+
+.happening-3 {
+  background: linear-gradient(to right, #880D2E 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+}
+
+.happening-3:hover {
+  background-position: left bottom;
+}
+
+.happening-4 {
+  border-bottom: 1px solid var(--light);
+  background: linear-gradient(to right, #2E880D 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+}
+
+.happening-4:hover {
+  background-position: left bottom;
+}
+
+
+/* 
+-------
+Studies 
+-------
+*/
 
 .studies-section {
   min-height: 100vh;
@@ -300,6 +448,7 @@ Home
 }
 
 .study-card {
+  position: relative;
   padding: 1rem;
   transition: all 0.2s ease;
   transition-property: color, background-color, border;
@@ -307,10 +456,24 @@ Home
   background-color: transparent !important;
   color: #dddddd;
 }
-.study-card:hover {
-  /* background-color: var(--secondary) !important;
-  color: #111111 !important; */
-  border-bottom: 1px solid var(--secondary);
+
+.study-card:after {
+  content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  width: 70%;
+  height: 5px;
+  background: var(--secondary);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.study-card:hover::after {
+  transform: scaleX(1);
 }
 
 .study {
