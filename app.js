@@ -1,10 +1,10 @@
 import Turbolinks from 'turbolinks';
-import initStudies from './js/studies';
+// import initStudies from './js/studies';
 Turbolinks.start();
 Turbolinks.setProgressBarDelay(0);
 
 document.addEventListener('turbolinks:load', () => {
-  initStudies();
+  // initStudies();
 
   const navbar = document.querySelector('nav');
   console.log(navbar)

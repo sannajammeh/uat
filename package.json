@@ -19,14 +19,19 @@
   },
   "homepage": "https://github.com/sannajammeh/uat#readme",
   "dependencies": {
+<<<<<<< HEAD
     "concurrently": "^5.3.0",
     "jquery": "^3.5.1",
     "serve": "^11.3.2",
+=======
+>>>>>>> 433dbd5ea8e982986b822c2bacac708708560cfb
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-static-files-copy": "^2.5.0"
+    "parcel-plugin-static-files-copy": "^2.5.0",
+    "concurrently": "^5.3.0",
+    "serve": "^11.3.2"
   },
   "staticFiles": {
     "staticPath": [
