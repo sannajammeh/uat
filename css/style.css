@@ -35,6 +35,7 @@ body {
   color: var(--text-on-bg);
   scroll-behavior: smooth;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 h1,
@@ -103,6 +104,8 @@ Navbar
   display: flex;
   align-items: center;
   height: 105px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .navbar-nav {
