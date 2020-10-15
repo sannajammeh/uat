@@ -1,10 +1,10 @@
 import Turbolinks from 'turbolinks';
-import initStudies from './js/studies';
+// import initStudies from './js/studies';
 Turbolinks.start();
 Turbolinks.setProgressBarDelay(0);
 
 document.addEventListener('turbolinks:load', () => {
-  initStudies();
+  // initStudies();
 
   const navbar = document.querySelector('nav');
   navbar.className = 'navbar';
@@ -38,12 +38,6 @@ document.addEventListener('turbolinks:load', () => {
     </div>
     <div class="overlay"></div>
 `;
-
-  const footer = document.querySelector('footer');
-  footer.className = 'footer';
-  footer.innerHTML = /*hmtl*/ `
-  
-  `;
 
   // Responsive navbar
   const navbarTrigger = document.querySelector('.navbar-trigger');
