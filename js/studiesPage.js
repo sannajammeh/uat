@@ -3,7 +3,6 @@ let isMobile = match.matches;
 match.addEventListener('change', (e) => (isMobile = e.matches));
 
 const studyDisplay = document.querySelector('.study-display');
-if (!studyDisplay) return;
 
 const studies = document.querySelectorAll('[data-study-label]');
 studies.forEach((study) => {
