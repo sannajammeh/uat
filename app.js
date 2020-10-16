@@ -7,21 +7,18 @@ document.addEventListener('turbolinks:load', () => {
   // initStudies();
 
   const navbar = document.querySelector('nav');
-  console.log(navbar)
   if (!navbar) {
     return;
   }
   navbar.className = 'navbar';
   navbar.innerHTML = /*html*/ `
 
-  <a role="button" title="icon" href="#page-top"><img class="logo-img" src="/img/uat-logo.png"></a>
+  <a role="button" title="icon" href="/"><img class="logo-img" src="/img/uat-logo.png"></a>
   <div class="container">
   <ul class="navbar-nav">
     <li class="nav-link"><a title="Go to home" href="/" class="nav-item active">Home</a></li>
-    <li class="nav-link"><a title="Go to studies" href="studies.html" class="nav-item">Studies</a></li>
-    <li class="nav-link"><a title="Go to studies" href="about-us.html" class="nav-item">About us</a></li>
-    <li class="nav-link"><a title="Go to test" href="#" class="nav-item">Test</a></li>
-    <li class="nav-link"><a title="Go to test" href="#" class="nav-item">Test</a></li>
+    <li class="nav-link"><a title="Go to studies" href="studies" class="nav-item">Studies</a></li>
+    <li class="nav-link"><a title="Go to studies" href="about-us" class="nav-item">About us</a></li>
   </ul>
 </div>
 <button role="button" title="navbar" class="navbar-trigger">
@@ -34,11 +31,9 @@ document.addEventListener('turbolinks:load', () => {
   mobileNav.innerHTML = /*html*/ `
     <div class="display-nav">
       <ul class="display-ul">
-        <li class="display-link"><a title="Go to test" class="display-item" href="index.html">Home</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="studies.html">Studies</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="about-us.html">About Us</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="#">Test</a></li>
+        <li class="display-link"><a title="Go to test" class="display-item" href="/">Home</a></li>
+        <li class="display-link"><a title="Go to test" class="display-item" href="/studies">Studies</a></li>
+        <li class="display-link"><a title="Go to test" class="display-item" href="/about-us">About Us</a></li>
       </ul>
     </div>
     <div class="overlay"></div>

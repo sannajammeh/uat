@@ -458,15 +458,21 @@ Studies
   height: 70vh;
   object-fit: cover;
   background-image: url('https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   /* width: 40vh; */
-}
-.studies-header img {
 }
 
 .studies-section {
-  min-height: 100vh;
+  min-height: calc(100vh - 105px);
   height: 100%;
   padding: 1rem;
+}
+
+.studies-section h1 {
+  font-weight: 500;
+  font-size: 3em !important;
 }
 
 .study-card {
@@ -512,6 +518,21 @@ Studies
 @media screen and (min-width: 768px) {
   .studies-section {
     padding: 3rem 2rem;
+  }
+  
+}
+
+@media screen and (max-width: 768px){
+  .studies-section {
+    font-size: 14px;
+    min-height: 400px;
+    height: auto;
+  }
+  .studies-section h2 {
+    font-size: 1.5em;
+  }
+  .study-display {
+    height: calc(100vh - 105px);
   }
 }
 
