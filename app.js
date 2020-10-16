@@ -1,8 +1,13 @@
+// Importing turbolinks & initializing
+// This allows us to fetch the contents of the <body></body> on each page request
+// rather than sending the user over to another page. This is a much faster approach 
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
 Turbolinks.setProgressBarDelay(0);
 
+// When a new page loads or user navigates to index this function executes
 document.addEventListener('turbolinks:load', () => {
+  // Inject the navbar into every page on every page load
   const navbar = document.querySelector('nav');
   if (!navbar) {
     return;
@@ -24,6 +29,7 @@ document.addEventListener('turbolinks:load', () => {
 <a class="nav-search" role="button" title="search" href="#"><div><i class="fas fa-search"></i></div></a>
 `;
 
+  // Do the same with mobile navbar
   const mobileNav = document.querySelector('.mobile-nav');
   mobileNav.innerHTML = /*html*/ `
     <div class="display-nav">
@@ -36,7 +42,7 @@ document.addEventListener('turbolinks:load', () => {
     <div class="overlay"></div>
 `;
 
-  // Responsive navbar
+  // Responsive mobile navbar
   const navbarTrigger = document.querySelector('.navbar-trigger');
   const overlay = document.querySelector('.overlay');
   const displayNav = document.querySelector('.display-nav');
@@ -46,7 +52,7 @@ document.addEventListener('turbolinks:load', () => {
     displayNav.classList.toggle('active');
   });
 
-  // Nav-link active
+  // Adding active links to navbar
   const path = window.location.href;
   const navLinks = document.querySelectorAll('.nav-item');
 
