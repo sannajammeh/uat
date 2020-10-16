@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "concurrently \"parcel watch **/*.html\" \"serve dist\"",
+    "dev": "concurrently \"parcel watch index.html **/*.html\" \"serve dist\"",
     "build": "parcel build index.html **/*.html"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sannajammeh/uat#readme",
   "dependencies": {
+    "css": "^3.0.0",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
