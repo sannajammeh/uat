@@ -21,7 +21,7 @@ document.addEventListener('turbolinks:load', () => {
     <li class="nav-link"><a title="Go to home" href="/" class="nav-item active">Home</a></li>
     <li class="nav-link"><a title="Go to studies" href="studies" class="nav-item">Studies</a></li>
     <li class="nav-link"><a title="Go to studies" href="about-us" class="nav-item">About us</a></li>
-    <li class="nav-link"><a title="Go to Join Us" href="/join-us">Join Us</a></li>
+    <li class="nav-link"><a title="Go to Join Us" href="/join-us" class="nav-item">Join Us</a></li>
   </ul>
 </div>
 <button role="button" title="navbar" class="navbar-trigger">
