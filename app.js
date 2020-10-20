@@ -21,22 +21,22 @@ document.addEventListener('turbolinks:load', () => {
     <li class="nav-link"><a title="Go to home" href="/" class="nav-item active">Home</a></li>
     <li class="nav-link"><a title="Go to studies" href="studies" class="nav-item">Studies</a></li>
     <li class="nav-link"><a title="Go to studies" href="about-us" class="nav-item">About us</a></li>
+    <li class="nav-link"><a title="Go to Join Us" href="/join-us">Join Us</a></li>
   </ul>
 </div>
 <button role="button" title="navbar" class="navbar-trigger">
   <i class="fas fa-bars"></i>
-</button>
-<a class="nav-search" role="button" title="search" href="#"><div><i class="fas fa-search"></i></div></a>
-`;
+</button>`;
 
   // Do the same with mobile navbar
   const mobileNav = document.querySelector('.mobile-nav');
   mobileNav.innerHTML = /*html*/ `
     <div class="display-nav">
       <ul class="display-ul">
-        <li class="display-link"><a title="Go to test" class="display-item" href="/">Home</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="/studies">Studies</a></li>
-        <li class="display-link"><a title="Go to test" class="display-item" href="/about-us">About Us</a></li>
+        <li class="display-link"><a title="Go to Home" class="display-item" href="/">Home</a></li>
+        <li class="display-link"><a title="Go to Studies" class="display-item" href="/studies">Studies</a></li>
+        <li class="display-link"><a title="Go to About Us" class="display-item" href="/about-us">About Us</a></li>
+        <li class="display-link"><a title="Go to Join Us" class="display-item" href="/join-us">Join Us</a></li>
       </ul>
     </div>
     <div class="overlay"></div>
