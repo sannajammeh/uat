@@ -283,7 +283,7 @@ Home
   border: none;
   margin: 0 auto;
   box-shadow: var(--shadow);
-  transition: transform 1s;
+  transition: box-shadow 0.5s ease;
 }
 
 .home-img {
@@ -322,7 +322,7 @@ Footer
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
   position: relative;
 }
 
@@ -366,6 +366,8 @@ Footer
 }
 
 .footer-btn {
+  text-decoration: none;
+  color: var(--black);
   float: right;
   border: 1px solid var(--secondary);
   padding: 10px;
@@ -390,6 +392,7 @@ Footer
 }
 
 .happenings {
+  text-decoration: none;
   border-top: 1px solid var(--light);
   color: var(--light);
   padding: 30px;
@@ -595,8 +598,8 @@ About us
 }
 
 .gallery-img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
   box-shadow: var(--shadow);
   transition: all 0.5s ease-in-out;
@@ -671,6 +674,7 @@ Join us
   padding: 15px;
   width: 70%;
   border: 1px transparent;
+  transition: box-shadow 0.5s ease; 
 }
 
 .form-input:hover,

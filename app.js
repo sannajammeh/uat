@@ -42,14 +42,6 @@ document.addEventListener('turbolinks:load', () => {
     <div class="overlay"></div>
 `;
 
-const footer = document.querySelector('.footer');
-footer.innerHTML = /*html*/ `
-<div class="row">
-  <div class="col-xs-6"></div>
-  <div class="col-xs-6"></div>
-</div>
-
-`;
 
   // Responsive mobile navbar
   const navbarTrigger = document.querySelector('.navbar-trigger');
@@ -72,4 +64,21 @@ footer.innerHTML = /*html*/ `
       navLink.classList.add('active');
     }
   });
+
+  // Contact form 
+const contactForm = document.querySelector("#contact-form");
+const submitBtn = document.querySelector('.send-btn');
+
+contactForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  // Getting all inputs
+  const {lname, fname, email, message, file} = e.target;
+
+  submitBtn.innerHTML = "Application sent!";
+  e.target.reset();
+
+})
+
 });
+

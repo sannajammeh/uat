@@ -39,14 +39,14 @@
             <p class="join-us-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus aliquam sunt rem magnam dolores delectus voluptate mollitia corrupti modi nobis dicta quisquam velit sapiente vel assumenda nemo commodi, nisi obcaecati.</p>
         </div>
       </div>
-      <form class="form col-xs-12 justify-content-center align-items-center" method="POST" action="contact.php">
+      <form class="form col-xs-12 justify-content-center align-items-center" id="contact-form">
 
       <div class="row form-content">
         <div class="col-xs-3 form-item">
           <label for="lname" class="form-label text-center">Your last name *</label> 
         </div>
         <div class="col-xs-9 form-item">
-          <input type="text" name="name" class="form-input" placeholder="Please enter your last name ..." required="required">
+          <input type="text" name="lname" class="form-input" placeholder="Please enter your last name ..." required="required">
         </div>
       </div>
 
@@ -55,7 +55,7 @@
           <label for="fname" class="form-label text-center">Your first name *</label> 
         </div>
         <div class="col-xs-9 form-item">
-          <input type="text" name="name" class="form-input" placeholder="Please enter your first name ..." required="required">
+          <input type="text" name="fname" class="form-input" placeholder="Please enter your first name ..." required="required">
         </div>
       </div>
 
@@ -64,7 +64,7 @@
         <label for="email" class="form-label text-center">Your email adress name *</label> 
        </div>
        <div class="col-xs-9 form-item">
-        <input type="text" name="email" class="form-input" placeholder="Please enter your first name ..." required="required">
+        <input type="email" name="email" class="form-input" placeholder="Please enter your first name ..." required="required">
        </div>
      </div>
 
@@ -73,16 +73,16 @@
         <label for="message" class="form-label text-center">Your email adress *</label> 
        </div>
        <div class="col-xs-9 form-item">
-         <textarea name="message" rows="8" class="form-input" placeholder="Your message for us... *" required="required"></textarea>
+         <textarea name="message" rows="8" class="form-input" placeholder="Your message for us... " required="required"></textarea>
        </div>
      </div>
 
      <div class="row form-content" >
       <div class="col-xs-3 form-item">
-        <h4 class="form-label text-center">Upload Diploma</h4>
+        <label for="file" class="form-label text-center">Upload Diploma *</label>
       </div>
       <div class="col-xs-9 form-item">
-        <button class="form-btn">Choose file</button>
+        <input id="file" type="file" name="file" class="form-btn" required="required"/>
       </div>
     </div>
 
