@@ -236,9 +236,9 @@ Navbar
   text-decoration: none;
   color: var(--text-on-bg);
   position: relative;
-  font-size: 50px;
+  font-size: 30px;
   text-decoration: none;
-  padding: 20px 20px;
+  margin: 20px 20px;
   display: block;
   border-bottom: 1px solid var(--secondary);
 }
