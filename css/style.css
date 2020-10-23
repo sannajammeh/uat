@@ -59,7 +59,6 @@ hr {
   margin: 50px 0;
 }
 
-
 .text-center {
   text-align: center;
 }
@@ -83,7 +82,7 @@ w-max-100 {
   align-items: center;
 }
 
-.justify-content-center { 
+.justify-content-center {
   justify-content: center;
 }
 
@@ -180,18 +179,18 @@ Navbar
   visibility: hidden;
 }
 .overlay::after {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 50%;
   top: 0;
   right: 0;
   width: 50px;
   transform: scale(0);
-  height: 50px;  
+  height: 50px;
   transition: all 0.5s ease;
   background: var(--light);
   transition-property: border-radius, transform;
-} 
+}
 .overlay.active {
   visibility: visible;
 }
@@ -449,8 +448,6 @@ Footer
   background-position: left bottom;
 }
 
-
-
 /* 
 -------
 Studies 
@@ -524,12 +521,11 @@ Studies
     padding: 3rem 2rem;
   }
   .studies-header-img {
-    height: 70vh; 
+    height: 70vh;
   }
-  
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .studies-section {
     font-size: 14px;
     min-height: 400px;
@@ -574,7 +570,6 @@ About us
 .about-us-small-heading {
   padding: 20px 0;
   margin: 0 1rem;
-
 }
 
 .about-us-small-heading:after {
@@ -626,7 +621,6 @@ About us
   }
   .about-us-txt {
     padding: 30px 0;
-
   }
 }
 
@@ -663,18 +657,17 @@ Join us
 }
 
 .form-content {
-  padding: 10px;
+  padding: 30px;
 }
 
 .form-item {
-  padding: 20px;
   margin: auto;
 }
 .form-input {
   padding: 15px;
   width: 70%;
   border: 1px transparent;
-  transition: box-shadow 0.5s ease; 
+  transition: box-shadow 0.5s ease;
 }
 
 .form-input:hover,
@@ -720,7 +713,6 @@ textarea {
   color: var(--light);
 }
 
-
 /*
 ------ 
 Footer 
@@ -731,13 +723,3 @@ Footer
   height: 300px;
   background-color: var(--black);
 }
-
-
-
-
-
-
-
-
-
-
