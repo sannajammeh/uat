@@ -675,6 +675,12 @@ Join us
     width: 70%;
   }
 }
+@media screen and (max-width: 767px) {
+  .form-item input,
+  .form-item label {
+    margin: auto;
+  }
+}
 
 .form-input:hover,
 textarea:hover,
