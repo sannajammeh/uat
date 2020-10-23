@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "concurrently \"parcel watch index.html **/*.html\" \"serve dist\"",
+    "serve": "serce dist",
     "build": "parcel build index.html **/*.html"
   },
   "repository": {

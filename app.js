@@ -1,6 +1,6 @@
 // Importing turbolinks & initializing
 // This allows us to fetch the contents of the <body></body> on each page request
-// rather than sending the user over to another page. This is a much faster approach 
+// rather than sending the user over to another page. This is a much faster approach
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
 Turbolinks.setProgressBarDelay(0);
@@ -14,7 +14,6 @@ document.addEventListener('turbolinks:load', () => {
   }
   navbar.className = 'navbar';
   navbar.innerHTML = /*html*/ `
-
   <a role="button" title="icon" href="/"><img class="logo-img" src="/img/uat-logo.png"></a>
   <div class="container">
   <ul class="navbar-nav">
@@ -42,7 +41,6 @@ document.addEventListener('turbolinks:load', () => {
     <div class="overlay"></div>
 `;
 
-
   // Responsive mobile navbar
   const navbarTrigger = document.querySelector('.navbar-trigger');
   const overlay = document.querySelector('.overlay');
@@ -65,20 +63,17 @@ document.addEventListener('turbolinks:load', () => {
     }
   });
 
-  // Contact form 
-const contactForm = document.querySelector("#contact-form");
-const submitBtn = document.querySelector('.send-btn');
+  // Contact form
+  const contactForm = document.querySelector('#contact-form');
+  const submitBtn = document.querySelector('.send-btn');
 
-contactForm?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  
-  // Getting all inputs
-  const {lname, fname, email, message, file} = e.target;
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  submitBtn.innerHTML = "Application sent!";
-  e.target.reset();
+    // Getting all inputs
+    const { lname, fname, email, message, file } = e.target;
 
-})
-
+    submitBtn.innerHTML = 'Application sent!';
+    e.target.reset();
+  });
 });
-
