@@ -272,6 +272,28 @@ Home
   justify-content: center;
 }
 
+.home-row {
+}
+.home-section-row {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.happenings-section {
+  background-color: var(--black);
+}
+@media screen and (min-width: 768px) {
+  .home-row {
+    max-height: calc(100vh - 77px);
+  }
+  .home-section-row {
+    height: calc(100vh - 77px);
+  }
+  .happenings-section {
+    max-height: calc(100vh - 77px);
+    overflow-y: scroll;
+  }
+}
+
 .section-header {
   padding: 40px 0;
 }
