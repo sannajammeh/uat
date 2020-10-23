@@ -678,6 +678,7 @@ Join us
 @media screen and (max-width: 767px) {
   .form-item input,
   .form-item label {
+    display: block;
     margin: auto;
   }
 }
