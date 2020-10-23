@@ -665,9 +665,15 @@ Join us
 }
 .form-input {
   padding: 15px;
-  width: 70%;
+  width: 100%;
   border: 1px transparent;
   transition: box-shadow 0.5s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .form-input {
+    width: 70%;
+  }
 }
 
 .form-input:hover,
